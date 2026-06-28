@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return """
-    <h1>Azure Web App is Working!</h1>
+    <h1>Azure Web App is Working now!</h1>
     <p>Congratulations, your Flask app is deployed sarat.</p>
     """
 
