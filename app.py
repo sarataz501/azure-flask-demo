@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     return """
     <h1>Azure Web App is Working!</h1>
-    <p>Congratulations, your Flask app is deployed.</p>
+    <p>Congratulations, your Flask app is deployed sarat.</p>
     """
 
 @app.route("/config")
@@ -20,4 +20,4 @@ def config():
 
 @app.route("/hello")
 def hello():
-    return {"message": "Hello from Azure"}
+    return {"message": "Hello from Azure sarat"}
