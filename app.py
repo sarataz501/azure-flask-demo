@@ -1,14 +1,26 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def home():
     return """
-    <h1>Azure Web App is Working but from git sarat!</h1>
-    <p>Congratulations, your Flask app is deployed from git.</p>
+    <h1>Azure Web App is Working!</h1>
+    <p>Congratulations, your Flask app is deployed.</p>
     """
+
+
+@app.route("/config")
+def config():
+    environment = os.environ.get("ENVIRONMENT", "Not Set")
+
+    return {
+        "environment": environment
+    }
+
 
 @app.route("/hello")
 def hello():
-    return {"message": "This is via github actions deployment!"}
+    return {"message": "Hello from Azure"}
